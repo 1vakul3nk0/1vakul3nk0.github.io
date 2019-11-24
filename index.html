@@ -1,0 +1,25 @@
+<html>
+	<head>
+		<title>Список вопросов</title>
+		<script>
+			function getHref() {
+				var protocol = "https";
+				var domain = "docs.google.com";
+				var path1 = "spreadsheets/d";
+				var path2 = "Ej0iOOnWGgNrusFjjJRVtird2p_i8XReKEVhAJuDPaw";
+				return protocol + "://" + domain + "/" +  path1 + "/" + getSecretNumber(2) + path2;
+			}
+			
+			function getSecretNumber(d) {
+				for (var i = 0; i < 42; i++) {
+					if (i % d == 1) {
+						return i;
+					}
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<input type="button" value="Показать список вопросов" onclick="window.open(getHref(), '_self')"/>
+	</body>
+</html>
